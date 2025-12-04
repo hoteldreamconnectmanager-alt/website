@@ -70,8 +70,8 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://nyc3.digitaloceanspaces.com/bhindi-drive/files/42048d7d-c3e0-4173-9662-b75e3c8cf0d8/2025-12-04T10-58-11-786Z-6b03b769-chat-image-1764845891767-0.jpg') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://nyc3.digitaloceanspaces.com/bhindi-drive/files/42048d7d-c3e0-4173-9662-b75e3c8cf0d8/2025-12-04T10-58-11-786Z-6b03b769-chat-image-1764845891767-0.jpg') center/cover no-repeat;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -79,44 +79,47 @@
             text-align: center;
             color: white;
             margin-top: 60px;
+            background-size: cover;
+            background-position: center;
         }
         
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
         }
         
         .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s backwards;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         
         .cta-button {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             background: #28a745;
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
             animation: fadeInUp 1s ease 0.4s backwards;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(40,167,69,0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(40,167,69,0.5);
             background: #218838;
         }
         
         .cta-button::before {
             content: "📞 ";
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         
         .features {
@@ -244,6 +247,11 @@
         footer a {
             color: #ffd700;
             text-decoration: none;
+            font-weight: bold;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
         }
         
         @keyframes fadeInUp {
@@ -264,6 +272,11 @@
             
             .hero-content p {
                 font-size: 1.2rem;
+            }
+            
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 1rem 2rem;
             }
             
             .nav-links {
