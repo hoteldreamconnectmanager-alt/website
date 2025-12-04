@@ -70,8 +70,8 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://nyc3.digitaloceanspaces.com/bhindi-drive/files/42048d7d-c3e0-4173-9662-b75e3c8cf0d8/2025-12-04T10-58-11-786Z-6b03b769-chat-image-1764845891767-0.jpg') center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -85,29 +85,38 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s backwards;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: #ff6b6b;
+            background: #28a745;
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
             animation: fadeInUp 1s ease 0.4s backwards;
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255,107,107,0.3);
+            box-shadow: 0 10px 25px rgba(40,167,69,0.4);
+            background: #218838;
+        }
+        
+        .cta-button::before {
+            content: "📞 ";
+            font-size: 1.2rem;
         }
         
         .features {
@@ -232,6 +241,11 @@
             padding: 2rem;
         }
         
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -254,10 +268,15 @@
             
             .nav-links {
                 gap: 1rem;
+                font-size: 0.9rem;
             }
             
             .about-content {
                 grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -284,7 +303,7 @@
         <div class="hero-content">
             <h1>Welcome to Hotel Dream Connect</h1>
             <p>Your Gateway to Exceptional Hospitality Experiences</p>
-            <a href="#contact" class="cta-button">Get Started Today</a>
+            <a href="tel:+919992731234" class="cta-button">Call Now: 9992731234</a>
         </div>
     </section>
 
@@ -361,7 +380,7 @@
 
     <footer>
         <p>&copy; 2024 Hotel Dream Connect. All rights reserved.</p>
-        <p>Email: hoteldreamconnect.manager@gmail.com</p>
+        <p>📧 Email: hoteldreamconnect.manager@gmail.com | 📞 Phone: <a href="tel:+919992731234">9992731234</a></p>
     </footer>
 </body>
 </html>
